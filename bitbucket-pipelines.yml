@@ -4,4 +4,4 @@ pipelines:
   default:
     - step:
         script:
-          - echo "welcome arun"
+          - git push --mirror master
