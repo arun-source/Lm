@@ -1,5 +1,3 @@
-clone:
-  depth: full
 pipelines:
   branches:
     ' ** ':
