@@ -3,7 +3,7 @@ pipelines:
       '**':
       - step:
           script:
-            - git push --mirror git@github.com:arun-source/Lm.git
+            - git remote add sync git@github.com:arun-source/Lm.git
             - git checkout '**'
             - git pull    
             - git push sync '**'
