@@ -5,14 +5,8 @@ pipelines:
       feature/master1:
         - step:
             script:
-              - git remote add sync git@github.com:arun-source/Lm.git
-              - git checkout feature/master1
-              - git pull    
-              - git push sync feature/master1
+              - git push --mirror git@github.com:arun-source/Lm.git
       feature/dev:
         - step:
             script:
-              - git remote add sync git@github.com:arun-source/Lm.git
-              - git checkout feature/dev
-              - git pull    
-              - git push sync feature/dev
+              - git push --mirror git@github.com:arun-source/Lm.git
