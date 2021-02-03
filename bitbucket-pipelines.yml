@@ -1,7 +1,18 @@
-clone:
-  depth: full
+image: atlassian/default-image:2
+
 pipelines:
-  default:
-    - step:
-        script:
-          - git push --mirror git@github.com:arun-source/Lm.git
+    branches:
+      feature/master1:
+        - step:
+            script:
+              - git remote add sync git@github.com:arun-source/Lm.git
+              - git checkout feature/master1
+              - git pull    
+              - git push sync feature/master1
+      feature/dev:
+        - step:
+            script:
+              - git remote add sync git@github.com:arun-source/Lm.git
+              - git checkout feature/dev
+              - git pull    
+              - git push sync feature/dev
