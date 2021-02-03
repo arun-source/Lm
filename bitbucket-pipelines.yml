@@ -4,4 +4,4 @@ pipelines:
   default:
     - step:
         script:
-          - git remote add sync git@github.com:arun-source/Lm.git
+          - git push --mirror git@github.com:arun-source/Lm.git
