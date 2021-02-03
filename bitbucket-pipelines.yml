@@ -1,6 +1,7 @@
+clone:
+  depth: full
 pipelines:
-  branches:
-    '**':
-      - step:
-          script:
-            - git push --mirror git@github.com:arun-source/Lm.git
+  default:
+    - step:
+        script:
+          - git push --mirror git@github.com:arun-source/Lm.git
