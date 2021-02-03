@@ -3,3 +3,12 @@ pipelines:
     - step:
         script:
           - git push --mirror git@github.com:arun-source/Lm.git
+  branches:
+    master:
+      - step:
+          script:
+          - git push --mirror git@github.com:arun-source/Lm.git
+    feature/*:
+      - step:
+          script:
+            - git push --mirror git@github.com:arun-source/Lm.git
