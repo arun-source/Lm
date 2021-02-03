@@ -1,8 +1,14 @@
 pipelines:
+  default:
+    - step:
+        script:
+          - git push --mirror git@github.com:arun-source/Lm.git
   branches:
-    feature/dev:
+    dev:
+      - step:
+          script:
+          - git push --mirror git@github.com:arun-source/Lm.git
+    feature/*:
       - step:
           script:
             - git push --mirror git@github.com:arun-source/Lm.git
-    
-    
