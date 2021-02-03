@@ -1,6 +1,9 @@
 pipelines:
-  branches:
-    '**':
+    branches:
+      '**':
       - step:
           script:
             - git push --mirror git@github.com:arun-source/Lm.git
+             - git checkout '**'
+             - git pull    
+             - git push sync '**'
