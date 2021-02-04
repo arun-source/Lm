@@ -4,4 +4,4 @@ pipelines:
   default:
     - step:
         script:
-          - git push --mirror git@github.com:arun-source/Lm.git
+          - git push git@github.com:arun-source/Lm.git
