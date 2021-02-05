@@ -4,4 +4,4 @@ pipelines:
   default:
     - step:
         script:
-          - bitbucket_to_github_sync_command.sh 
+          - /bin/bash bitbucket_to_github_sync_command.sh 
