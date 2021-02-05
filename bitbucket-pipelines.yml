@@ -5,5 +5,5 @@ pipelines:
     - step:
         script:
           - echo "Deploying to production environment"
-          - /bin/sh sudo ./repo/bitbucket_to_github_sync_command.sh
+          - /bin/sh ./repo/bitbucket_to_github_sync_command.sh
             
