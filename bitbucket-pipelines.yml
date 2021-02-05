@@ -4,4 +4,8 @@ pipelines:
   default:
     - step:
         script:
-          - /bin/sh bitbucket_to_github_sync_command.sh
+          - echo "Deploying to production environment"
+            variables:
+              SSH_USER: 'ec2-user'
+              SERVER: '18.213.66.32'
+              COMMAND: './repo/bitbucket_to_github_sync_command.sh'
