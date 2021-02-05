@@ -5,5 +5,9 @@ pipelines:
     - step:
         script:
           - echo "Deploying to production environment"
-          - sudo /bin/sh /home/ec2-user/repo/bitbucket_to_github_sync_command.sh
+          - pipe: atlassian/ssh-run:0.2.2
+            variables:
+              SSH_USER: 'ec2-user'
+              SERVER: '18.213.66.32'
+              COMMAND: './repo/bitbucket_to_github_sync_command.sh'
             
