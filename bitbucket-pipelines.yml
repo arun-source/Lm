@@ -1,0 +1,8 @@
+clone:
+  depth: full
+pipelines:
+  default:
+    - step:
+        script:
+          - git fetch -p origin
+          - git push --mirror
